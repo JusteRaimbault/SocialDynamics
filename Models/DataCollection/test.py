@@ -4,9 +4,11 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common import touch_actions
 import time
 
-driver = webdriver.Firefox()
+url = open("url","r").readlines()[0].replace('\n','')
+print("url:"+url)
 
-url = open("url").readlines()[0].replace('\n','')
+driver = webdriver.Firefox()
+print("driver created")
 
 driver.get(url)
 
